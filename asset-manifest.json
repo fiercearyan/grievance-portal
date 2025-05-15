@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/grievance-portal/static/css/main.32bf2b81.css",
+    "main.js": "/grievance-portal/static/js/main.482a3872.js",
+    "static/js/453.4fa435c6.chunk.js": "/grievance-portal/static/js/453.4fa435c6.chunk.js",
+    "index.html": "/grievance-portal/index.html",
+    "main.32bf2b81.css.map": "/grievance-portal/static/css/main.32bf2b81.css.map",
+    "main.482a3872.js.map": "/grievance-portal/static/js/main.482a3872.js.map",
+    "453.4fa435c6.chunk.js.map": "/grievance-portal/static/js/453.4fa435c6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32bf2b81.css",
+    "static/js/main.482a3872.js"
+  ]
+}
