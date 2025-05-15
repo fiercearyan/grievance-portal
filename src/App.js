@@ -30,34 +30,34 @@ export default function App() {
   return (
     <div className="container">
       <h1>Dear Bembaa 💕</h1>
-      <p>Tell me what’s on your heart today. I’m here, no matter what 💌</p>
+      <p>aaiye sunte hai Madamji ke Nakhre 💌</p>
 
       {/* 💡 Wrap your form controls inside a <form> element */}
       <form ref={form} onSubmit={sendEmail}>
         <input
           type="text"
           name="title"
-          placeholder="🌸 Title please..."
+          placeholder="🌸 Shuru Kijiye Title se..."
           required
         />
 
         <textarea
           name="message"
-          placeholder="💬 Btaiye kya hua? I'm here to listen (even if you're mad)"
+          placeholder="💬 Btaiye kya hua? I'm here to listen (even if you're mad)😌"
           required
         />
 
         <input
           type="text"
           name="mood"
-          placeholder="😔 Feeling like...hmm??"
+          placeholder="🤭 Mood kesa h billu ka??"
           required
         />
 
         <input
           type="text"
           name="wish"
-          placeholder="🎁 kya kiya jaaye? till then I’ll guess 😘"
+          placeholder="🎁 kya kiya jaaye? Mai guess kr lunga waise😘"
           required
         />
 
@@ -69,7 +69,7 @@ export default function App() {
           readOnly
         />
 
-        <button type="submit">💖 Send 💖</button>
+        <button type="submit">Send with Love ❤️</button>
       </form>
     </div>
   );
