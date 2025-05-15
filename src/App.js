@@ -10,22 +10,21 @@ export default function App() {
 
     emailjs
       .sendForm(
-        "service_w11qstg",
-        "template_1938xlf",
+        "service_w11qstg",        // your EmailJS service ID
+        "template_1938xlf",       // your EmailJS template ID
         form.current,
-        "c_IwBikeox5BOOvWU"
+        "c_IwBikeox5BOOvWU"       // your public key
       )
       .then(
         (result) => {
-          alert("💌 Your grievance is sent!");
+          console.log(result.text);
+          alert("Sent to Aryan ❤️");
         },
         (error) => {
-          alert("Oops! Something went wrong. Try again 💔");
-          console.error(error.text);
+          console.log(error.text);
+          alert("Oops! Something went wrong.");
         }
       );
-
-    e.target.reset();
   };
 
   return (
@@ -33,34 +32,45 @@ export default function App() {
       <h1>Dear Bembaa 💕</h1>
       <p>Tell me what’s on your heart today. I’m here, no matter what 💌</p>
 
-      <input
-        type="text"
-        name="title"
-        placeholder="🌸 Title please..."
-        required
-      />
+      {/* 💡 Wrap your form controls inside a <form> element */}
+      <form ref={form} onSubmit={sendEmail}>
+        <input
+          type="text"
+          name="title"
+          placeholder="🌸 Title please..."
+          required
+        />
 
-      <textarea
-        name="message"
-        placeholder="💬 Btaiye kya hua? I'm here to listen (even if you're mad)"
-        required
-      />
+        <textarea
+          name="message"
+          placeholder="💬 Btaiye kya hua? I'm here to listen (even if you're mad)"
+          required
+        />
 
-      <input
-        type="text"
-        name="mood"
-        placeholder="😔 Feeling like...hmm??"
-        required
-      />
+        <input
+          type="text"
+          name="mood"
+          placeholder="😔 Feeling like...hmm??"
+          required
+        />
 
-      <input
-        type="text"
-        name="wish"
-        placeholder="🎁 kya kiya jaaye? till then I’ll guess 😘"
-        required
-      />
+        <input
+          type="text"
+          name="wish"
+          placeholder="🎁 kya kiya jaaye? till then I’ll guess 😘"
+          required
+        />
 
-      <button type="submit">💖 Send 💖</button>
+        <input
+          type="text"
+          name="to_email"
+          value="aryankrsingh7@gmail.com"
+          hidden
+          readOnly
+        />
+
+        <button type="submit">💖 Send 💖</button>
+      </form>
     </div>
   );
 }
