@@ -29,8 +29,8 @@ export default function App() {
 
   return (
     <div className="container">
-      <h1>Dear Bembaa 💕</h1>
-      <p>aaiye sunte hai Madamji ke Nakhre 💌</p>
+      <h1>Haan toh Madamji ♥️</h1>
+      <p>aaiye sunte hai Bembaa ke Nakhre 💌</p>
 
       {/* 💡 Wrap your form controls inside a <form> element */}
       <form ref={form} onSubmit={sendEmail}>
