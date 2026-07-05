@@ -35,7 +35,7 @@ export default function App() {
       </div>
 
       <h1>&gt; submit_update()</h1>
-      <p className="subtitle">// fill required fields and execute</p>
+      <p className="subtitle">{"// fill required fields and execute"}</p>
 
       <form ref={form} onSubmit={sendEmail}>
         <label htmlFor="f-title">title</label>
