@@ -10,54 +10,54 @@ export default function App() {
 
     emailjs
       .sendForm(
-        "service_w11qstg",        // your EmailJS service ID
-        "template_1938xlf",       // your EmailJS template ID
+        "service_w11qstg",        // EmailJS service ID
+        "template_1938xlf",       // EmailJS template ID
         form.current,
-        "c_IwBikeox5BOOvWU"       // your public key
+        "c_IwBikeox5BOOvWU"       // EmailJS public key
       )
       .then(
         (result) => {
           console.log(result.text);
-          alert("Sent to Aryan ❤️");
+          alert("Your submission has been received.");
         },
         (error) => {
           console.log(error.text);
-          alert("Oops! Something went wrong.");
+          alert("Submission failed. Please try again.");
         }
       );
   };
 
   return (
     <div className="container">
-      <h1>Haan toh Madamji ♥️</h1>
-      <p>aaiye sunte hai Bembaa ke Nakhre 💌</p>
+      <div className="eyebrow">Feedback Portal</div>
+      <h1>Submit Feedback</h1>
+      <p>Please complete the fields below. All submissions are reviewed.</p>
 
-      {/* 💡 Wrap your form controls inside a <form> element */}
       <form ref={form} onSubmit={sendEmail}>
         <input
           type="text"
           name="title"
-          placeholder="🌸 Shuru Kijiye Title se..."
+          placeholder="Subject"
           required
         />
 
         <textarea
           name="message"
-          placeholder="💬 Btaiye kya hua? I'm here to listen (even if you're mad)😌"
+          placeholder="Describe the issue or feedback in detail"
           required
         />
 
         <input
           type="text"
           name="mood"
-          placeholder="🤭 Mood kesa h billu ka??"
+          placeholder="Priority / current status"
           required
         />
 
         <input
           type="text"
           name="wish"
-          placeholder="🎁 kya kiya jaaye? Mai guess kr lunga waise😘"
+          placeholder="Requested resolution"
           required
         />
 
@@ -69,7 +69,7 @@ export default function App() {
           readOnly
         />
 
-        <button type="submit">Send with Love ❤️</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );

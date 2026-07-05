@@ -41,7 +41,10 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.3.0"
+    "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.7"
   },
   "homepage": "https://fiercearyan.github.io/grievance-portal"
 }
