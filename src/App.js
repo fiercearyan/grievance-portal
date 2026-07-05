@@ -18,46 +18,57 @@ export default function App() {
       .then(
         (result) => {
           console.log(result.text);
-          alert("Your submission has been received.");
+          alert("status: 200 — update transmitted");
         },
         (error) => {
           console.log(error.text);
-          alert("Submission failed. Please try again.");
+          alert("status: 500 — transmission failed, retry");
         }
       );
   };
 
   return (
     <div className="container">
-      <div className="eyebrow">Feedback Portal</div>
-      <h1>Submit Feedback</h1>
-      <p>Please complete the fields below. All submissions are reviewed.</p>
+      <div className="status-row">
+        <span className="status-dot" />
+        <span className="status-label">status_update.req</span>
+      </div>
+
+      <h1>&gt; submit_update()</h1>
+      <p className="subtitle">// fill required fields and execute</p>
 
       <form ref={form} onSubmit={sendEmail}>
+        <label htmlFor="f-title">title</label>
         <input
+          id="f-title"
           type="text"
           name="title"
-          placeholder="Subject"
+          placeholder="untitled"
           required
         />
 
+        <label htmlFor="f-message">description</label>
         <textarea
+          id="f-message"
           name="message"
-          placeholder="Describe the issue or feedback in detail"
+          placeholder="// describe the change"
           required
         />
 
-        <input
-          type="text"
-          name="mood"
-          placeholder="Priority / current status"
-          required
-        />
+        <label htmlFor="f-mood">status</label>
+        <select id="f-mood" name="mood" required defaultValue="">
+          <option value="" disabled>-- select --</option>
+          <option value="on_track">on_track</option>
+          <option value="at_risk">at_risk</option>
+          <option value="blocked">blocked</option>
+        </select>
 
+        <label htmlFor="f-wish">next_steps</label>
         <input
+          id="f-wish"
           type="text"
           name="wish"
-          placeholder="Requested resolution"
+          placeholder="null"
           required
         />
 
@@ -69,7 +80,7 @@ export default function App() {
           readOnly
         />
 
-        <button type="submit">Submit</button>
+        <button type="submit">execute --submit</button>
       </form>
     </div>
   );
