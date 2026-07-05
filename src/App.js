@@ -21,8 +21,11 @@ export default function App() {
           alert("status: 200 — update transmitted");
         },
         (error) => {
-          console.log(error.text);
-          alert("status: 500 — transmission failed, retry");
+          console.error("EmailJS error:", error);
+          alert(
+            "transmission failed: " +
+              (error && error.text ? error.text : JSON.stringify(error))
+          );
         }
       );
   };
